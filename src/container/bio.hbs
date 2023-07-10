@@ -1,0 +1,148 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <main>
+    <section>
+            
+    <h1>{{name}}</h1>
+    <hr>
+    {{> title data="Years of life" big=true}}
+    <p>{{birthdate}}</p>
+    <p>{{birthplace}}</p>
+    <br>
+    
+    <p>{{deathdate}}</p>
+    <p>{{deathplace}}</p>
+    <hr>
+    </section>
+    <section>
+        <h1>About him</h1>
+    <div>
+        {{occupation}}
+    </div>
+    <p><strong>Achievements</strong></p>
+    <ul>
+            {{#with known_for}}
+            <li>'Theory of Relativity'</li>
+            <br>
+            <li> 'E=mc²'</li>
+            <br>
+            <li>'Photoelectric Effect'</li>
+            <br>
+            <li> 'Brownian Motion'</li>
+            {{/with}}           
+    </ul>
+    </section>
+    <hr>
+    <section>
+         {{> title data="Education" big=true}}
+         <ul>
+            {{#each education}}
+            <li>{{degree}},{{field}}</li>
+            <p>{{institution}}</p>
+            <p><strong>{{year}}</strong></p>
+            {{/each}}
+         </ul>
+    </section>
+    <hr>
+    <section>
+          {{> title data="Publication" big=true}}
+          <ul>
+            {{#each notable_publications}}
+            <li><strong>{{title}}</strong></li>
+            <p><strong>{{year}}</strong></p>
+            <p><strong>{{publisher}}</strong></p>
+            {{/each}}
+          </ul>
+    </section>
+    <hr>
+     <section>
+          {{> title data="Partners" big=true}}
+          <ul>
+            {{#each partners}}
+            <li><strong>{{name}}</strong></li>
+            <p>{{relationship}}</p>
+            <p><strong>{{years}}</strong></p>
+            {{/each}}
+          </ul>
+    </section>
+    <hr>
+    <section>
+          {{> title data="Awards" big=true}}
+          <ul>
+            {{#each awards}}
+            <li><strong>{{title}}</strong></li>
+            <p><strong>{{year}}</strong></p>
+            <p>{{description}}</p>
+            {{/each}}
+          </ul>
+    </section>
+    <hr>
+    <section>
+          {{> title data="Influences" big=true}}
+          <ul>
+            {{#with influences}}
+            <li>Isaac Newton</li>
+            <li>James Clerk Maxwell</li>
+            <li>Hermann Minkowski</li>
+            {{/with}}
+          </ul>
+    </section>
+    <hr>
+     <section>
+          {{> title data="Influenced" big=true}}
+          <ul>
+            {{#with influenced}}
+            <li>Niels Bohr</li>
+            <li>Erwin Schrödinger</li>
+            <li>Werner Heisenberg</li>
+            <li>Richard Feynman</li>
+            {{/with}}
+          </ul>
+    </section>
+    <hr>
+    <section>
+          {{> title data="Quotes" big=true}}
+          <ul>
+            {{#with quotes}}
+            <li><blockquote>Imagination is more important than knowledge.</blockquote></li>
+            <li><blockquote>I have no special talent. I am only passionately curious.</blockquote></li>
+            <li><blockquote>The important thing is not to stop questioning.</blockquote></li>
+            <li><blockquote>The most beautiful thing we can experience is the mysterious. It is the source of all true art and all science.</blockquote></li>
+            {{/with}}
+          </ul>
+    </section>
+    <hr>
+     <section>
+          {{> title data="Discoveries" big=true}}
+          <ul>
+            {{#each major_discoveries}}
+            <li><strong>{{title}}</strong></li>
+           <p><strong>{{year}}</strong></p>
+            <p>{{description}}</p>
+            {{/each}}
+          </ul>
+    </section>
+    <hr>
+     <section>
+          {{> title data="Contributions" big=true}}
+          <ul>
+            {{#with contributions}}
+            <li><strong>{{title}}</strong></li>
+            <p>{{description}}</p>
+            <p><strong>{{year}}</strong></p>
+            <p>{{field}}</p>
+            {{/with}}
+          </ul>
+    </section>
+    <hr>
+    </main>
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
