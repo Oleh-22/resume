@@ -364,6 +364,8 @@ router.get('/person', function (req, res) {
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
+
+  layout: 'bio,'
   res.render('bio', {
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -459,6 +461,7 @@ router.get('/bio', function (req, res) {
 // ================================================================
 
 router.get('/js', function (req, res) {
+  const newLocal = 'Chai'
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
