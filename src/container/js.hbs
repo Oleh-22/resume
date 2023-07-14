@@ -1,0 +1,117 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<main>
+    {{> title data="Language 'JS'" big=true}}
+    <section>
+        <ul>
+        <li><strong>{{name}}</strong></li>
+        <br>
+        <div>{{description}}</div>
+        {{#with history}}
+        <br>
+        <hr>
+        
+        <b>History</b>
+        <span class="badge rounded-pill text-bg-info">Info</span>
+        <div>{{year}}</div>
+        <br>
+        <b>Founder</b>
+        <div>{{founder}}</div>
+        {{/with}}
+        <hr>
+        {{> title data="Types" big=true}}
+       <span class="badge rounded-pill text-bg-primary">Primary</span>
+        <br>
+        <br>
+        {{#with types}}
+          <li>Number</li>
+          <li>String</li>
+          <li>Boolean</li>
+          <li>Null</li>
+          <li>Undefined</li>
+          <li>Symbol</li>
+          <li>Object</li>
+        {{/with}}
+        <hr>
+        {{> title data="Syntax" big=true}}
+        <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+        {{#with syntax}}
+        <br>
+        <br>
+        <b>Variables</b>
+        <br>
+        <li>{{variables}}</li>
+        <br>
+        <b>Functions</b>
+        <br>
+        <li>{{functions}}</li>
+        <br>
+        <b>Conditionals</b>
+        <br>
+        <li>{{conditionals}}</li>
+        <br>
+        <b>Loops</b>
+        <br>
+        <li>{{loops}}</li>
+         <br>
+        <b>Classes</b>
+        <br>
+        <li>{{classes}}</li>
+        <hr>
+        {{/with}}
+         {{> title data="Features" big=true}}
+         <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+         {{#with features}}
+            <li>First-class functions</li>
+            <li>Closures</li>
+            <li>Dynamic typing</li>
+            <li>Prototype-based inheritance</li>
+            <li>Asynchronous programming with Promises and async/await</li>
+            <li>Modules with import/export statements</li>
+         {{/with}}
+         <hr>
+         {{> title data="Libraries" big=true}}
+         <span class="badge rounded-pill text-bg-light">Additionl</span>
+         {{#with libraries}}
+            <li>jQuery</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Vue</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Lodash</li>
+            <li>Moment.js</li>
+            {{/with}}
+         <hr>
+         {{> title data="Tools" big=true}}
+         <span class="badge rounded-pill text-bg-light">Additionl</span>
+          {{#with tools}}
+            <li>Babel</li>
+            <li>Webpack</li>
+            <li>ESLint</li>
+            <li>Jest</li>
+            <li>Mocha</li>
+            <li>Chai</li>
+            <li>Selenium</li>
+            <li>Cypress</li>
+         {{/with}}
+         <hr>
+          {{> title data="Community" big=true}}
+          <span class="badge rounded-pill text-bg-dark">Other</span>
+          {{#each community}}
+            <li>{{name}}</li>
+            <br>
+            <p>{{type}}</p>
+         {{/each}}
+        </ul>
+    </section>
+</main>
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}

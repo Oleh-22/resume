@@ -1,0 +1,124 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<main>
+    {{> title data="Mac" big=true}}
+    <section>
+        <ul>
+          <h1>Information <span class="badge bg-secondary">New</span></h1>
+            <b>{{name}}</b>
+            <br>
+            <br>
+            <div>Description:</div>
+            <br>
+            <p>{{description}}</p>
+            <br>
+            <b>Price:</b>
+            <br>
+            <p>{{price}}</p>
+            <br>
+            <div>Category:{{category}}</div>
+            <br>
+            <hr>
+             {{> title data="Features" big=true}}
+             <span class="badge text-bg-info">Info</span>
+             {{#with features}}
+             <br>
+             <b>Processor:</b>
+             <br>
+             {{#with processor}}
+             <br>
+              <li>brand: {{brand}}</li>
+              <li>model: {{model}}</li>
+              <li>speed: {{spead}}</li>
+              <li>cores: {{cores}}</li>
+              <li>cache: {{cache}}</li>
+             {{/with}}
+             <br>
+             <b>Memory</b>
+             <br>
+             {{#with memory}}
+             <br>
+             <li>type: {{type}}</li>
+             <li>size: {{size}}</li>
+             <li>speed: {{speed}}</li>
+             {{/with}}
+             <br>
+             <b>Storage</b>
+             <br>
+             {{#with storage}}
+             <br>
+             <li>type: {{type}}</li>
+             <li>size: {{size}}</li>
+             {{/with}}
+             <br>
+             <b>Display</b>
+             <br>
+             {{#with display}}
+             <br>
+             <li>size: {{size}}</li>
+             <li>resolution:{{resolution}}</li>
+             <li>technology:{{technology}}</li>
+             <li>color space:{{color_space}}</li>
+             <li>brightness:{{brightness}}</li>
+             <li>refresh rate:{{refresh_rate}}</li>
+             {{/with}}
+             <br>
+             <b>Graphics</b>
+             <br>
+             {{#each ports}}
+             <br>
+              <li>type: {{type}}</li>
+              <li>count: {{count}}</li>
+             <div>Features:</div>
+             <li>{{features}}</li>
+             {{/each}}
+             <br>
+             <b>Battery</b>
+             <br>
+             {{#with battery}}
+             <br>
+              <li>type: {{type}}</li>
+               <li>capacity: {{capacity}}</li>
+                <li>life: {{life}}</li>
+             {{/with}}
+             <br>
+             <b>Weight</b>
+             <br>
+             <li>weight: {{weight}}</li>
+             <br>
+             <b>Dimensions</b>
+             <br>
+             {{#with dimensions}}
+             <br>
+              <li> height: {{ height}}</li>
+               <li> width: {{ width}}</li>
+                <li> depth: {{depth}}</li>
+             {{/with}}
+             <br>
+             <b>Operating system</b>
+             <br>
+             <li>{{ operating_system}}</li>
+             <br>
+             <b>Accessories</b>
+             <br>
+             {{#each accessories}}
+             <span class="badge text-bg-success">Other</span>
+             <br>
+              <li>{{name}}</li>
+              <br>
+              <div>{{price}}</div>
+             {{/each}}
+             <hr>
+             {{/with}}
+        </ul>
+    </section>
+</main>
+
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
