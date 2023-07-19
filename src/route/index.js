@@ -1505,5 +1505,17 @@ router.get('/task31', function (req, res) {
 
 // ================================================================
 
+router.get('/bootstrap2', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  layout: 'bootstrap2',
+    //            ↙ cюди вводимо назву файлу з сontainer
+    res.render('bootstrap2', {})
+
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
