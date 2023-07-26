@@ -14,7 +14,7 @@
             {{> title data="Users" big=true}}
             {{#each users}}
             <hr>
-            <b>Name</b>
+            <h5>Name</h5>
             <li>id: {{id}}</li>
             <p>name: {{name}}</p>
             <p>gender: {{gender}}</p>
@@ -37,7 +37,7 @@
             <p>age: {{age}}</p>
             {{/each}}
             <span class="badge text-bg-dark">Other</span>
-             <b>Groups</b>
+             <h5>Groups</h5>
             <div>Name:</div>
             {{#each groups}}
             <br>
@@ -57,8 +57,8 @@
             <hr>
           
             {{#each groups}}
-            <br>
-             <li>id: {{id}}</li>
+            
+             <li class="mt-5">id: {{id}}</li>
             <p>name: {{name}}</p>
              <p>description: {{description}}</p>
              <div>Members:</div>

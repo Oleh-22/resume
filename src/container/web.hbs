@@ -9,75 +9,65 @@
   <ul>
     <div>
       {{#each languages}}
-        <br>
-        <hr>
-        <br>
+       
+        <hr class="mt-3">
+       
         <strong>{{name}}</strong>
-        <br>
-        <br>
-        <br>
-        <div>{{version}}</div>
-        <br>
-        <li><strong>Description</strong></li>
-        <br>
-        <br>
-        <div>{{description}}</div>
-        <br>
+        
+        <div class="mt-3">{{version}}</div>
+        
+        <li class="mt-3"><strong>Description</strong></li>
+       
+        <div class="mt-5 mb-2">{{description}}</div>
         
           {{#each elements}}
+           
+            <h5 class="mt-3">Elements</h5>
+          
+            <li class="mt-3">{{name}}</li>
             <br>
-            <b>Elements</b>
-            <br>
-            <li>{{name}}</li>
-            <br>
-            <div>{{description}}</div>
-            <br>
+            <div class="mb-3">{{description}}</div>
+            
             {{#each attributes}}
-              <b>Attributes</b>
+              <h5>Attributes</h5>
               <p>{{name}}</p>
-              <br>
-              <div>{{description}}</div>
-              <br>
+              <div class="mt-3 mb-3">{{description}}</div>
+             
             {{/each}}
           {{/each}}
                   {{#each properties}}
-                  <br>
-                  <b>Properties</b>
-                  <br>
-                  <br>
-                  <li>{{name}}</li>
-                  <br>
-                  <div>{{description}}</div>
-                  <br>
+                
+                  <h5 class="mt-3 mb-5">Properties</h5>
+                 
+                  <li class="mt-3 mb-3">{{name}}</li>
+                 
+                  <div class="mb-3">{{description}}</div>
+                  
                     {{#each values}}
-                    <br>
-                    <strong>{{value}}</strong>
-                    <br>
-                    <br>
-                    <div>{{description}}</div>
+                  
+                    <h4 class="mt-3">{{value}}</h4>
+                   
+                    <div class="mt-5">{{description}}</div>
                     {{/each}}
                     {{/each}}
                       {{#each functions}}
-                          <br>
-                          <br>
-                          <b>Function</b>
-                          <br>
-                          <br>
-                            <li>{{name}}</li>
-                            <br>
-                            <div>{{description}}</div>
-                          <br>
+                         
+                          <h5 class="mt-5">Function</h5>
+                         
+                            <li class="mt-5">{{name}}</li>
+                            <div class="mt-3 mb-3">{{description}}</div>
+                         
                         {{#each parameters}}
-                        <br>
-                        <b>Parameters</b>
-                        <br>
-                        <br>
-                          <li>{{name}}</li>
-                          <br>
+                       
+                        <h5 class="mt-3 mb-3">Parameters</h5>
+                        
+                       
+                          <li  class="mt-3 mb-3">{{name}}</li>
+                         
                           <div>{{type}}</div>
-                        <br>
-                        <div>{{description}}</div>
-                        <br>
+                        
+                        <div  class="mt-3 mb-3">{{description}}</div>
+                        
                         {{/each}}
           {{/each}}
       {{/each}}
