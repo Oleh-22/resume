@@ -1,59 +1,13 @@
 <main class="p-5">
-      <h2>Список сторінок</h2>
-      <p clss="mt-4">Тут вам потрібно написати інформацію про ваш проєкт.</p>
-      <div>Це є мій перший пет-проект. Застосовув HTMl,Bootstrap.</div>
-      <div class="mt-5">
-               <a class="btn btn-primary" href="http://localhost:3000/summary">Summary</a>
+      {{#with pageList}}
+      <h2>{{title}}</h2>
+      <p class="mt-4">{{description}}</p>
+      <div>{{text}}</div>
+      {{#each button}}
+      <div class="mt-3">
+               <a class="btn btn-primary" href="{{link}}">{{text}}</a>
       </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/facebook">Facebook</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/education">Education</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/skills">Skills</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/work">Work</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/web">Web</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/bio">Bio</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/car">Car</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/task21">IT Languages</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/task22">InnovaMind</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/program">Program</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/task31">Website</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shopcart">Shopcart</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shopcatalog">ShopCatalog</a>
-      </div>
-       <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shophome">ShopHome</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shoporder">ShopOrder</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shopprofile">ShopProfile</a>
-      </div>
-        <div class="mt-3">
-               <a class="btn btn-primary" href="http://localhost:3000/shopreview">ShopReview</a>
-      </div>
+      {{/each}}
+      {{/with}}
+      
 </main>
