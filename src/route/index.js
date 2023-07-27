@@ -3413,6 +3413,39 @@ router.get('/index8', function (req, res) {
 
   res.render('index8', {
     layout: 'index',
+    firstname: 'Oleh',
+    surname: 'Kolodii',
+    projectName: 'Resume project',
+
+    pageList: {
+      title: 'Список сторінок',
+      description:
+        'Тут вам потрібно написати інформацію про ваш проєкт.',
+      text: 'Це є мій перший пет-проект. Застосовув HTMl,Bootstrap.',
+      button: [
+        { text: 'Skills', link: '/skills' },
+        { text: 'Summary', link: '/summary' },
+        { text: 'Education', link: '/education' },
+        { text: 'Work', link: '/work' },
+        { text: 'Web', link: '/web' },
+        { text: 'Person', link: '/person' },
+        { text: 'Facebook', link: '/facebook' },
+        { text: 'Car', link: '/car' },
+        { text: 'Js', link: '/js' },
+        { text: 'Bio', link: '/bio' },
+        { text: 'Mac', link: '/mac' },
+        { text: 'Program', link: '/program' },
+        { text: 'Shopcart', link: '/shopcart' },
+        { text: 'Shopcatalog', link: '/shopcatalog' },
+        { text: 'Shophome', link: '/shophome' },
+        { text: 'Shoporder', link: '/shoporder' },
+        { text: 'Shopprofile', link: '/shopprofile' },
+        { text: 'Shopreview', link: '/shopreview' },
+        { text: 'Task21', link: '/taskk21' },
+        { text: 'Task22', link: '/task22' },
+        { text: 'Task31', link: '/task31' },
+      ],
+    },
   })
 
   //                  ↑↑ сюди вводимо JSON дані
