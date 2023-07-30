@@ -3453,5 +3453,19 @@ router.get('/index8', function (req, res) {
 
 // ================================================================
 
+router.get('/selector1', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+
+  res.render('selector1', {
+    layout: 'bootstrap',
+  })
+
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
