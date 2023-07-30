@@ -1,3 +1,29 @@
+:root {
+  background: purple;
+}
+
+
 html {
   max-width: 1000px;
+
+  background: blue;
+}
+
+* {
+  color: red;
+}
+
+h2 {
+  color:green;
+}
+.card-dark{
+  background:#d0cdcd
+}
+
+.item{
+  color:green
+}
+
+.item:first-child {
+  color:blue
 }
